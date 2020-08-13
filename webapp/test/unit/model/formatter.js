@@ -1,22 +1,22 @@
 sap.ui.define([
 	"sap/ui/demo/walkthrough/model/formatter",
 	"sap/ui/model/resource/ResourceModel"
-], function (formatter, ResourceModel) {
+], function(formatter, ResourceModel) {
 	"use strict";
 
 	QUnit.module("Formatting functions", {
-		beforeEach: function () {
+		beforeEach: function() {
 			this._oResourceModel = new ResourceModel({
 				bundleUrl: sap.ui.require.toUrl("sap/ui/demo/walkthrough") + "/i18n/i18n.properties"
 			});
 		},
-		afterEach: function () {
+		afterEach: function() {
 			this._oResourceModel.destroy();
 		}
 	});
 
 
-	QUnit.test("Should return the translated texts", function (assert) {
+	QUnit.test("Should return the translated texts", function(assert) {
 
 		// Arrange
 		// this.stub() does not support chaining and always returns the right data

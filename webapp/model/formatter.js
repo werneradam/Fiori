@@ -1,7 +1,7 @@
-sap.ui.define([], function () {
+sap.ui.define([], function() {
 	"use strict";
 	return {
-		statusText: function (sStatus) {
+		statusText: function(sStatus) {
 			var resourceBundle = this.getView().getModel("i18n").getResourceBundle();
             var sResult;
             switch (sStatus) {

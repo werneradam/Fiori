@@ -1,26 +1,26 @@
 sap.ui.define([
 	"sap/ui/base/ManagedObject",
 	"sap/ui/core/Fragment"
-], function (ManagedObject, Fragment) {
+], function(ManagedObject, Fragment) {
 	"use strict";
 
 	return ManagedObject.extend("sap.ui.demo.walkthrough.controller.HelloDialog", {
 
-		constructor : function (oView) {
+		constructor: function(oView) {
 			this._oView = oView;
 		},
 
-		exit : function () {
+		exit: function() {
 			delete this._oView;
 		},
 
-		open : function () {
+		open: function() {
 			var oView = this._oView;
 
 			// create dialog lazily
 			if (!oView.byId("helloDialog")) {
 				var oFragmentController = {
-					onCloseDialog : function () {
+					onCloseDialog: function() {
 						oView.byId("helloDialog").close();
 					}
 				};
@@ -29,7 +29,7 @@ sap.ui.define([
 					id: oView.getId(),
 					name: "sap.ui.demo.walkthrough.view.HelloDialog",
 					controller: oFragmentController
-				}).then(function (oDialog) {
+				}).then(function(oDialog) {
 					// connect dialog to the root view of this component (models, lifecycle)
 					oView.addDependent(oDialog);
 					oDialog.open();

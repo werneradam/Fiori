@@ -1,6 +1,6 @@
 sap.ui.define([
 	"../localService/mockserver"
-], function (mockserver) {
+], function(mockserver) {
 	"use strict";
 
 	// initialize the mock server
